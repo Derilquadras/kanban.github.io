@@ -3,7 +3,7 @@ $(function () {
     .sortable({
       connectWith: ".connectedSortable",
       receive: function (event, ui) {
-        $(this).css({ "background-color": "lightblue" });
+        $(this).css({ "background-color": "none" });
       },
     })
     .disableSelection();
@@ -12,5 +12,11 @@ $(function () {
     $(".two")
       .find("ul")
       .append('<li class="card">' + txtNewItem + "</li>");
+
   });
+  $(".remove-button").click(function () {
+    $(".three")
+      .find("ul")
+      .empty();
+    });
 });
